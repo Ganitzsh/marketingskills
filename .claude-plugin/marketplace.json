@@ -1,13 +1,14 @@
 {
   "name": "marketingskills",
   "owner": {
-    "name": "Corey Haines",
-    "url": "https://corey.co"
+    "name": "Ganitzsh",
+    "url": "https://github.com/Ganitzsh"
   },
   "metadata": {
     "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, and growth",
     "version": "1.0.0",
-    "repository": "https://github.com/coreyhaines31/marketingskills"
+    "repository": "https://github.com/Ganitzsh/marketingskills",
+    "upstream": "https://github.com/coreyhaines31/marketingskills"
   },
   "plugins": [
     {

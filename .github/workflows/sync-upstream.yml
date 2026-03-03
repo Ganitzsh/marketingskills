@@ -1,0 +1,43 @@
+name: Sync with upstream
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # daily at 06:00 UTC
+  workflow_dispatch:        # manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/coreyhaines31/marketingskills.git || true
+          git fetch upstream
+
+      - name: Merge upstream main into fork
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git merge upstream/main --no-edit --strategy-option=ours || true
+
+      - name: Restore marketplace files (ours)
+        run: |
+          git checkout HEAD -- .claude-plugin/ || true
+          for dir in skills/*/; do
+            if [ -d "${dir}.claude-plugin" ]; then
+              git checkout HEAD -- "${dir}.claude-plugin/" || true
+            fi
+          done
+          git checkout HEAD -- .github/workflows/ || true
+
+      - name: Commit and push
+        run: |
+          git diff --quiet && git diff --staged --quiet || \
+            git commit -m "chore: sync with upstream $(date +%Y-%m-%d)"
+          git push origin main

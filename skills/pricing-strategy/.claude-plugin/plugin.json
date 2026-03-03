@@ -1,0 +1,8 @@
+{
+  "name": "pricing-strategy",
+  "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase",
+  "version": "1.1.0",
+  "skills": [
+    "../SKILL.md"
+  ]
+}

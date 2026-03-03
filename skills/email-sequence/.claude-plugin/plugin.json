@@ -1,0 +1,8 @@
+{
+  "name": "email-sequence",
+  "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurtur",
+  "version": "1.1.0",
+  "skills": [
+    "../SKILL.md"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "signup-flow-cro",
+  "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimizat",
+  "version": "1.1.0",
+  "skills": [
+    "../../skills/signup-flow-cro/SKILL.md"
+  ]
+}

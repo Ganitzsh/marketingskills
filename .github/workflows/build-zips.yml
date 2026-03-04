@@ -19,13 +19,15 @@ jobs:
       - name: Build ZIPs for each skill
         run: |
           mkdir -p dist
-          for skill_dir in skills/*/; do
+          cd skills
+          for skill_dir in */; do
             skill=$(basename "$skill_dir")
-            zip -r "dist/${skill}.zip" "$skill_dir"
+            zip -r "../dist/${skill}.zip" "${skill}/"
             echo "Zipped: ${skill}.zip"
           done
-          # Also zip all skills together
-          zip -r dist/all-marketing-skills.zip skills/
+          # Also zip all skills together (each skill at root level)
+          zip -r ../dist/all-marketing-skills.zip */
+          cd ..
           echo "Zipped: all-marketing-skills.zip"
           ls -lh dist/
 

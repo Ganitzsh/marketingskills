@@ -167,7 +167,7 @@ This repository includes a tools registry for agent-compatible marketing tools.
 
 - **Tool discovery**: Read `tools/REGISTRY.md` to see available tools and their capabilities
 - **Integration details**: See `tools/integrations/{tool}.md` for API endpoints, auth, and common operations
-- **MCP-enabled tools**: ga4, stripe, mailchimp, google-ads, resend, zapier
+- **MCP-enabled tools**: ga4, stripe, mailchimp, google-ads, resend, zapier, zoominfo, clay, supermetrics, coupler, outreach, crossbeam
 
 ### Registry Structure
 

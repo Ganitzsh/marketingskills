@@ -28,8 +28,13 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | keywords-everywhere | SEO | ✓ | - | [✓](clis/keywords-everywhere.js) | - | [keywords-everywhere.md](integrations/keywords-everywhere.md) |
 | clearbit | Data Enrichment | ✓ | - | [✓](clis/clearbit.js) | ✓ | [clearbit.md](integrations/clearbit.md) |
 | apollo | Data Enrichment | ✓ | - | [✓](clis/apollo.js) | - | [apollo.md](integrations/apollo.md) |
+| zoominfo | Data Enrichment | ✓ | ✓ | [✓](clis/zoominfo.js) | - | [zoominfo.md](integrations/zoominfo.md) |
+| clay | Data Enrichment | ✓ | ✓ | [✓](clis/clay.js) | - | [clay.md](integrations/clay.md) |
+| supermetrics | Data Aggregation | ✓ | ✓ | [✓](clis/supermetrics.js) | - | [supermetrics.md](integrations/supermetrics.md) |
+| coupler | Data Aggregation | ✓ | ✓ | [✓](clis/coupler.js) | - | [coupler.md](integrations/coupler.md) |
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
+| close | CRM | ✓ | - | [✓](clis/close.js) | - | [close.md](integrations/close.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
 | paddle | Payments | ✓ | - | [✓](clis/paddle.js) | ✓ | [paddle.md](integrations/paddle.md) |
 | rewardful | Referral | ✓ | - | [✓](clis/rewardful.js) | - | [rewardful.md](integrations/rewardful.md) |
@@ -62,6 +67,11 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | savvycal | Scheduling | ✓ | - | [✓](clis/savvycal.js) | - | [savvycal.md](integrations/savvycal.md) |
 | typeform | Forms | ✓ | - | [✓](clis/typeform.js) | ✓ | [typeform.md](integrations/typeform.md) |
 | intercom | Messaging | ✓ | - | [✓](clis/intercom.js) | ✓ | [intercom.md](integrations/intercom.md) |
+| outreach | Sales Engagement | ✓ | ✓ | [✓](clis/outreach.js) | - | [outreach.md](integrations/outreach.md) |
+| crossbeam | Partner Ecosystem | ✓ | ✓ | [✓](clis/crossbeam.js) | - | [crossbeam.md](integrations/crossbeam.md) |
+| pendo | Product Analytics | ✓ | - | [✓](clis/pendo.js) | - | [pendo.md](integrations/pendo.md) |
+| similarweb | Competitive Intelligence | ✓ | - | [✓](clis/similarweb.js) | - | [similarweb.md](integrations/similarweb.md) |
+| airops | AI Content | ✓ | - | [✓](clis/airops.js) | - | [airops.md](integrations/airops.md) |
 | buffer | Social | ✓ | - | [✓](clis/buffer.js) | - | [buffer.md](integrations/buffer.md) |
 | wistia | Video | ✓ | - | [✓](clis/wistia.js) | - | [wistia.md](integrations/wistia.md) |
 | trustpilot | Reviews | ✓ | - | [✓](clis/trustpilot.js) | - | [trustpilot.md](integrations/trustpilot.md) |
@@ -115,8 +125,9 @@ Customer relationship management and sales tools.
 |------|----------|:-------------:|
 | **hubspot** | SMB, marketing + sales alignment | ✓ |
 | **salesforce** | Enterprise, complex sales processes | ✓ |
+| **close** | SMB, high-velocity sales | [✓](clis/close.js) |
 
-**Agent recommendation**: HubSpot for startups/SMBs, Salesforce for enterprise.
+**Agent recommendation**: HubSpot for startups/SMBs. Close for high-velocity inside sales. Salesforce for enterprise.
 
 ### Payments
 
@@ -125,7 +136,6 @@ Payment processing and subscription management.
 | Tool | Best For | MCP Available |
 |------|----------|:-------------:|
 | **stripe** | SaaS subscriptions, developer-friendly | ✓ |
-
 | **paddle** | SaaS billing with tax handling | - |
 
 **Agent recommendation**: Stripe is the default for SaaS. Paddle for built-in tax compliance.
@@ -256,8 +266,10 @@ Company and person data enrichment for sales and marketing.
 |------|----------|-------|
 | **clearbit** | Company/person enrichment | Now HubSpot Breeze |
 | **apollo** | B2B prospecting, email finding | Large database |
+| **zoominfo** | B2B contacts, intent data | Enterprise-grade |
+| **clay** | Waterfall enrichment, outbound | 75+ data providers |
 
-**Agent recommendation**: Clearbit for enrichment. Apollo for prospecting and outbound.
+**Agent recommendation**: Clearbit for enrichment. Apollo for prospecting and outbound. ZoomInfo for enterprise B2B data with intent signals. Clay for waterfall enrichment across multiple providers.
 
 ### Reviews
 
@@ -291,6 +303,56 @@ Webinar and virtual event platforms.
 
 **Agent recommendation**: Demio for marketing-focused webinars. Livestorm for full event engagement.
 
+### Sales Engagement
+
+Sales engagement and outreach automation platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **outreach** | Enterprise sales engagement | Sequences, tasks, analytics |
+
+**Agent recommendation**: Outreach for enterprise sales teams managing multi-touch sequences at scale.
+
+### Product Analytics
+
+Product analytics, feature adoption tracking, and in-app guidance.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **pendo** | Feature adoption, in-app guides | Product-led growth |
+
+**Agent recommendation**: Pendo for tracking feature adoption and delivering targeted in-app guidance.
+
+### Competitive Intelligence
+
+Traffic analytics, competitor benchmarking, and market research.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **similarweb** | Website traffic, competitor analysis | Traffic sources, keywords |
+
+**Agent recommendation**: Similarweb for competitor traffic analysis and market benchmarking.
+
+### AI Content
+
+AI-powered content generation and optimization platforms.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **airops** | AI content workflows, SEO content | Flow-based automation |
+
+**Agent recommendation**: AirOps for building AI content workflows that generate SEO-optimized content at scale.
+
+### Partner Ecosystem
+
+Partner data sharing, co-sell, and ecosystem management.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **crossbeam** | Account overlaps, co-sell | Now part of Reveal |
+
+**Agent recommendation**: Crossbeam for identifying partner account overlaps and co-sell opportunities.
+
 ### Email Outreach
 
 Cold email outreach and email finding tools for link building and sales prospecting.
@@ -303,6 +365,17 @@ Cold email outreach and email finding tools for link building and sales prospect
 | **instantly** | Cold email at scale | Email warmup built-in |
 
 **Agent recommendation**: Hunter for finding emails. Lemlist or Instantly for sending cold email campaigns. Snov for combined finding + outreach.
+
+### Data Aggregation
+
+Marketing data pipeline tools that connect multiple platforms for unified reporting.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **supermetrics** | Cross-platform data pulling | 200+ connectors |
+| **coupler** | Automated data flows to sheets/BI | Scheduled pipelines |
+
+**Agent recommendation**: Supermetrics for pulling data from multiple marketing platforms into unified reports. Coupler.io for automated data flows to spreadsheets and BI tools.
 
 ### Commerce & CMS
 
@@ -340,6 +413,12 @@ These tools have Model Context Protocol servers available, enabling direct agent
 - **google-ads** - Ad campaign management
 - **resend** - Transactional email sending
 - **zapier** - Workflow automation
+- **zoominfo** - B2B contacts and intent data
+- **clay** - Data enrichment and outbound automation
+- **supermetrics** - Cross-platform marketing data
+- **coupler** - Marketing data pipelines
+- **outreach** - Sales engagement sequences
+- **crossbeam** - Partner ecosystem data
 
 To use MCP tools, ensure the appropriate MCP server is configured in your environment.
 
